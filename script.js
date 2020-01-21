@@ -53,4 +53,6 @@ const index = comments.findIndex(comment => comment.id === 823423);
 
 console.log(index);
 
-comments.splice(index, 1);
+// comments.splice(index, 1);
+
+const newComments = [...comments.slice(0, index), ...comments.slice(index + 1)];
