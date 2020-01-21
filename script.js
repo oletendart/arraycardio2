@@ -1,4 +1,5 @@
 "use strict";
+// # Array Cardio Day 2 (30 days Javascript Vanilla)
 
 const people = [
   { name: "Wes", year: 1988 },
@@ -13,3 +14,13 @@ const comments = [
   { text: "Ramen in my fav food ever", id: 123523 },
   { text: "Nice Nice Nice !", id: 542328 }
 ];
+
+// Some and Every Checks
+// Array.prototype.some() // is at least one person 19 ?
+const isAdult = people.some(function(person) {
+  const currentYear = new Date().getFullYear();
+  if (currentYear - person.year >= 19) {
+    return true;
+  }
+});
+console.log(isAdult);
